@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function StickyHeader({ collapsed }) {
+export default function StickyHeader({ collapsed }: {collapsed:boolean}) {
   return (
     <motion.div
       initial={{ y: 40, opacity: 0 }}

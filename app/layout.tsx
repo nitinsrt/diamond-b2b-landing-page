@@ -1,4 +1,5 @@
 import "./globals.css";
+import {ReactNode} from "react"
 
 export const metadata = {
   title: "Premium Diamond Manufacturer | Certified Natural & Lab-Grown Diamonds",
@@ -9,7 +10,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: {children:ReactNode}) {
   return (
     <html lang="en">
       <body className="bg-white text-gray-800">{children}</body>

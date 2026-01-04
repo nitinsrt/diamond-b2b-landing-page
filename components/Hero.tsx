@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function Hero({ collapsed }) {
+export default function Hero({ collapsed }: {collapsed: boolean}) {
   return (
     <div className="relative w-full h-full">
       {/* Video BG */}
