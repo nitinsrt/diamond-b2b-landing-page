@@ -36,9 +36,15 @@ export default function B2BInquiryForm() {
     additionalDetails: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    if (type === "checkbox") {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  )=> {
+    const { name, value, type } = e.target;
+    const target = e.target;
+    if (target instanceof HTMLInputElement && type === "checkbox") {
+        const checked = target.checked;
       if (name.startsWith("certification")) {
         setFormData((prev) => ({
           ...prev,
@@ -69,7 +75,7 @@ export default function B2BInquiryForm() {
     }
   };
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>)  {
     e.preventDefault();
     setStatus("Sending...");
 
@@ -527,7 +533,7 @@ export default function B2BInquiryForm() {
                 value={formData.additionalDetails}
                 onChange={handleChange}
                 placeholder="Looking for pieces of round diamonds in 1.00ct-1.20ct, VVS1 clarity, DEF color for an urgent bulk order. Please provide verified pricing."
-                rows="4"
+                rows={4}
                 className="w-full p-4 rounded bg-gray-900 border border-gray-700"
               />
             </div>
