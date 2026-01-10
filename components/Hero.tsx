@@ -1,48 +1,48 @@
-"use client";
-import { motion } from "framer-motion";
-
-export default function Hero({ collapsed }: {collapsed: boolean}) {
+export default function Hero() {
   return (
-    <div className="relative w-full h-full">
-      {/* Video BG */}
-      <motion.video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 ${
-          collapsed ? "opacity-0" : "opacity-100"
-        }`}
-        src="/diamond-bg1.mp4"
-      />
+    <section className="w-full bg-white py-10 pb-0">
+      <div className="h-full flex flex-col md:flex-row items-center justify-center px-6 md:px-16 lg:px-24 md:mr-[-80px]">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-      <div className="absolute inset-0 bg-black/40" />
+          {/* Left: Text */}
+          <div className="space-y-9">
+            <h1 className="text-4xl leading-tight md:text-5xl font-medium text-gray-900 font-serif">
+              Buy Natural & Lab-Grown (CVD) Diamonds<br />at Best Prices
+            </h1>
 
-      {/* Hero Text */}
-      <motion.div
-        initial={false}
-        animate={collapsed ? { scale: 0.8, y: 15 } : { scale: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
-      >
-        <h1 className="text-white text-5xl md:text-7xl font-light tracking-widest">
-          Buy Natural & Lab-Grown (CVD) Diamonds at Best Prices
-        </h1>
+            <p className="text-gray-600 text-lg">
+              Trusted Sourcing From Surat & Mumbai
+            </p>
 
-        {!collapsed && (
-          <p className="mt-5 text-gray-200 text-lg md:text-xl max-w-2xl">
-            Trusted Sourcing from Surat & Mumbai
-          </p>
-        )}
-        <div className="mt-6 flex justify-center items-center flex-row">
-          <a href="https://wa.me/917565857905?text=Hi%20I%20want%20to%20buy%20natural%20or%20lab-grown%20diamonds" className="mr-4 text-black bg-green-50 px-6 py-4 rounded-md text-md hover:bg-green-300 transition" target="_blank">
-            WhatsApp Now
-          </a>
-          <a href="#enquiry" className=" text-black bg-green-50 px-6 py-4 rounded-md text-md hover:bg-green-300 transition">
-            Enquire
-          </a>
+            <div className="flex gap-4 pt-2">
+              <a
+                href="https://wa.me/your-number"
+                className="px-6 py-3 rounded-md bg-green-900 text-white font-medium hover:bg-green-800 transition"
+              >
+                WhatsApp Now
+              </a>
+
+              <a
+                href="#quote"
+                className="px-6 py-3 rounded-md bg-green-900 text-white font-medium hover:bg-green-800 transition"
+              >
+                Request Wholesale Quote
+              </a>
+            </div>
+          </div>
+
+          {/* Right: Diamonds image */}
+          <div className="mt-10 md:mt-0 w-full h-full flex justify-center md:justify-start md:items-center">
+            <div className="relative w-full h-full md:-ml-30">
+              <img
+                src="https://i.ibb.co/5ZkYhJh/my-diamonds-bg.png"
+                alt="Loose diamonds"
+                className="w-[140%] md:w-[160%] h-full object-contain md:object-fill"
+              />
+            </div>
+          </div>
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </section>
   );
 }

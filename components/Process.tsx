@@ -1,19 +1,33 @@
 "use client";
 import { motion } from "framer-motion";
+import FeaturesCard from "./FeaturesCard";
 
 export default function Process() {
   const steps = [
-    "Diamond Selection",
-    "Cutting & Polishing",
-    "Quality Certification",
-    "Global Delivery",
+    {
+      index:1,
+      img:"tick.svg",
+      title:'Genuine Trusted Sources',
+      subtext:'Direct access to surat and mumbai manufacturers'
+    },
+    {
+      index:2,
+      img:"dollar.svg",
+      title:'Best Wholesale Pricing',
+      subtext:'Transparent pricing with genuine videos and reports'
+    },
+    {
+      index:3,
+      img:"deliver.svg",
+      title:'Fast Worldwide Delivery',
+      subtext:'Safe & insured shipping'
+    }
   ];
 
   return (
-    <section className="py-20 bg-gray-700">
-      <h2 className="text-center text-4xl font-semibold">Our Process</h2>
+    <section className="bg-white pt-2">
 
-      <div className="mt-14 grid grid-cols-1 md:grid-cols-4 gap-10 max-w-6xl mx-auto px-6">
+      <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-25 max-w-6xl mx-auto px-6">
         {steps.map((step, i) => (
           <motion.div
             key={i}
@@ -21,10 +35,9 @@ export default function Process() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.2 }}
-            className="bg-gray-400 p-6 shadow rounded-xl text-center"
+            className="bg-white px-3 py-4 shadow rounded-xl text-center"
           >
-            <div className="text-5xl font-light text-white">{i + 1}</div>
-            <h3 className="text-xl font-medium mt-4 text-white">{step}</h3>
+            <FeaturesCard img={step.img} title={step.title} subtext={step.subtext}/>
           </motion.div>
         ))}
       </div>
