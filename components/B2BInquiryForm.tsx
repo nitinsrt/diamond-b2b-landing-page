@@ -7,9 +7,8 @@ export default function B2BInquiryForm() {
         fullName: "",
         companyName: "",
         cityState: "",
-        country: "USA",
         email: "",
-        country2: "USA",
+        country: "USA",
         certifications: {
             GIA: false,
             IGI: false,
@@ -98,9 +97,8 @@ export default function B2BInquiryForm() {
                 fullName: "",
                 companyName: "",
                 cityState: "",
-                country: "USA",
                 email: "",
-                country2: "USA",
+                country: "USA",
                 certifications: {
                     GIA: false,
                     IGI: false,
@@ -190,27 +188,6 @@ export default function B2BInquiryForm() {
                         </div>
 
                         <div>
-                            <label className="block mb-2 text-sm">
-                                Country <span className="text-red-400">*</span>
-                            </label>
-                            <select
-                                name="country"
-                                value={formData.country}
-                                onChange={handleChange}
-                                className="w-full p-4 rounded bg-white border border-gray-700"
-                                required
-                            >
-                                <option value="USA">USA</option>
-                                <option value="UK">UK</option>
-                                <option value="Canada">Canada</option>
-                                <option value="Australia">Australia</option>
-                                <option value="India">India</option>
-                                <option value="UAE">UAE</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-
-                        <div>
                             <label className="block mb-2 text-sm">Email & Address</label>
                             <input
                                 name="email"
@@ -227,8 +204,8 @@ export default function B2BInquiryForm() {
                                 Country <span className="text-red-400">*</span>
                             </label>
                             <select
-                                name="country2"
-                                value={formData.country2}
+                                name="country"
+                                value={formData.country}
                                 onChange={handleChange}
                                 className="w-full p-4 rounded bg-white border border-gray-700"
                                 required
@@ -428,70 +405,6 @@ export default function B2BInquiryForm() {
                                 <option value="SI1, SI2">SI1, SI2</option>
                                 <option value="I1, I2, I3">I1, I2, I3</option>
                             </select>
-                        </div>
-
-                        <div>
-                            <label className="block mb-2 text-sm">
-                                Budget <span className="text-red-400">*</span>
-                            </label>
-                            <div className="space-y-2">
-                                <label className="flex items-center">
-                                    <input
-                                        type="radio"
-                                        name="budget"
-                                        value="below-2000"
-                                        checked={formData.budget === "below-2000"}
-                                        onChange={handleChange}
-                                        className="mr-2"
-                                        required
-                                    />
-                                    <span>Below $2,000</span>
-                                </label>
-                                <label className="flex items-center">
-                                    <input
-                                        type="radio"
-                                        name="budget"
-                                        value="2000-5000"
-                                        checked={formData.budget === "2000-5000"}
-                                        onChange={handleChange}
-                                        className="mr-2"
-                                    />
-                                    <span>$2,000 - $5,000</span>
-                                </label>
-                                <label className="flex items-center">
-                                    <input
-                                        type="radio"
-                                        name="budget"
-                                        value="5000-10000"
-                                        checked={formData.budget === "5000-10000"}
-                                        onChange={handleChange}
-                                        className="mr-2"
-                                    />
-                                    <span>$5,000 - $10,000</span>
-                                </label>
-                                <label className="flex items-center">
-                                    <input
-                                        type="radio"
-                                        name="budget"
-                                        value="10000-25000"
-                                        checked={formData.budget === "10000-25000"}
-                                        onChange={handleChange}
-                                        className="mr-2"
-                                    />
-                                    <span>$10,000 - $25,000</span>
-                                </label>
-                                <label className="flex items-center">
-                                    <input
-                                        type="radio"
-                                        name="budget"
-                                        value="above-25000"
-                                        checked={formData.budget === "above-25000"}
-                                        onChange={handleChange}
-                                        className="mr-2"
-                                    />
-                                    <span>Above $25,000</span>
-                                </label>
-                            </div>
                         </div>
 
                         <div>

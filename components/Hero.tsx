@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="w-full bg-white py-10 pb-0">
+    <section className="w-full bg-gray-50 py-10 pb-0">
       <div className="h-full flex flex-col md:flex-row items-center justify-center px-6 md:px-16 lg:px-24 md:mr-[-80px]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
@@ -17,7 +17,7 @@ export default function Hero() {
             <div className="flex gap-4 pt-2">
               <a
                 href="https://wa.me/your-number"
-                className="px-6 py-3 rounded-md bg-green-900 text-white font-medium hover:bg-green-800 transition"
+                className="px-2 py-3 md:px-6 md:py-3 rounded-md bg-green-900 text-white font-medium hover:bg-green-800 transition"
               >
                 WhatsApp Now
               </a>
@@ -35,7 +35,7 @@ export default function Hero() {
           <div className="mt-10 md:mt-0 w-full h-full flex justify-center md:justify-start md:items-center">
             <div className="relative w-full h-full md:-ml-30">
               <img
-                src="https://i.ibb.co/5ZkYhJh/my-diamonds-bg.png"
+                src="/my-diamonds-bg.png"
                 alt="Loose diamonds"
                 className="w-[140%] md:w-[160%] h-full object-contain md:object-fill"
               />
